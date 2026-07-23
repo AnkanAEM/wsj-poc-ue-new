@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p8803-e21945.adobeaemcloud.com/bin/franklin.delivery/AnkanAEM/wsj-poc-ue-new/main"
+    type: "markup"
+    suffix: ".html"

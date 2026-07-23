@@ -1,0 +1,16 @@
+.hlx/*
+coverage/*
+logs/*
+node_modules/*
+
+helix-importer-ui
+.DS_Store
+*.bak
+.idea
+
+# Agent customizations & skills
+.agents/
+
+# Ensure these files are tracked
+!CLAUDE.md
+!AGENTS.md

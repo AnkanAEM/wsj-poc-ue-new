@@ -1,0 +1,400 @@
+/* Body scroll lock when modal is open */
+body.lead-form-modal-open {
+  overflow: hidden !important;
+}
+
+.lead-form {
+  --lead-primary: #8b5cf6;
+  --lead-primary-hover: #7c3aed;
+  --lead-bg: #0f172a;
+  --lead-card-bg: #1e293b;
+  --lead-border: #334155;
+  --lead-text: #f8fafc;
+  --lead-text-muted: #94a3b8;
+  --lead-radius: 16px;
+  --lead-glow: 0 12px 36px 0 rgb(139 92 246 / 25%);
+
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  color: var(--lead-text);
+}
+
+/* Modal Overlay Mode (Default when not always-show) */
+.lead-form .lead-form-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgb(15 23 42 / 80%);
+  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+  opacity: 1;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lead-form .lead-form-modal-overlay.hidden {
+  display: none !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Inline Container Mode (When always-show is enabled) */
+.lead-form .lead-form-container {
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.lead-form .lead-form-card {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  background: linear-gradient(145deg, #111827 0%, #1e1b4b 100%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: var(--lead-radius);
+  padding: 2.25rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 70%);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: lead-modal-scale 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lead-modal-scale {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lead-form .lead-form-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 8%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  color: var(--lead-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.lead-form .lead-form-close-btn:hover {
+  background: rgb(255 255 255 / 20%);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.lead-form .lead-form-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  padding-right: 1.5rem;
+}
+
+.lead-form .lead-form-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgb(139 92 246 / 15%);
+  color: #a78bfa;
+  border: 1px solid rgb(167 139 250 / 30%);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.lead-form .lead-form-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.lead-form .lead-form-subtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--lead-text-muted);
+}
+
+.lead-form .lead-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lead-form .lead-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (width >= 600px) {
+  .lead-form .lead-form-row {
+    flex-direction: row;
+  }
+}
+
+.lead-form .lead-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lead-form .lead-form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.lead-form .lead-form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgb(30 41 59 / 80%);
+  border: 1px solid var(--lead-border);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.lead-form .lead-form-input:focus {
+  border-color: var(--lead-primary);
+  box-shadow: 0 0 0 3px rgb(139 92 246 / 25%);
+  background: rgb(30 41 59 / 100%);
+}
+
+.lead-form .field-highlight {
+  border-color: #a78bfa !important;
+  box-shadow: 0 0 15px rgb(167 139 250 / 50%) !important;
+  animation: lead-pulse 1.5s ease-in-out;
+}
+
+@keyframes lead-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.lead-form .lead-form-phone-wrap {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lead-form .lead-form-phone-prefix {
+  background: #334155;
+  padding: 0.75rem 0.85rem;
+  color: var(--lead-text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--lead-border);
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.lead-form .phone-input {
+  border-radius: 0 10px 10px 0;
+}
+
+.lead-form .lead-form-error-msg {
+  font-size: 0.75rem;
+  color: #f87171;
+  display: none;
+  margin-top: 0.2rem;
+}
+
+.lead-form .checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.lead-form .lead-form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--lead-text-muted);
+  line-height: 1.4;
+}
+
+.lead-form .lead-form-checkbox-label input[type="checkbox"] {
+  accent-color: var(--lead-primary);
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.lead-form .lead-form-submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgb(139 92 246 / 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.lead-form .lead-form-submit-btn:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  box-shadow: 0 6px 20px rgb(139 92 246 / 55%);
+}
+
+.lead-form .lead-form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lead-form .btn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgb(255 255 255 / 30%);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: lead-spinner 0.8s linear infinite;
+}
+
+@keyframes lead-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lead-form .hidden {
+  display: none !important;
+}
+
+.lead-form .lead-form-alert {
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: rgb(239 68 68 / 15%);
+  border: 1px solid rgb(239 68 68 / 30%);
+  color: #fca5a5;
+}
+
+/* Success Confirmation State */
+.lead-form .lead-form-success {
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lead-form .success-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgb(16 185 129 / 15%);
+  border: 1px solid rgb(52 211 153 / 30%);
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.lead-form .success-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.lead-form .success-text {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--lead-text-muted);
+}
+
+.lead-form .success-details {
+  width: 100%;
+  max-width: 450px;
+  background: rgb(30 41 59 / 80%);
+  border: 1px solid var(--lead-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead-form .success-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--lead-text-muted);
+}
+
+.lead-form .highlight-code {
+  font-family: monospace;
+  font-size: 1rem;
+  color: #a78bfa;
+}
+
+.lead-form .success-badge {
+  padding: 0.2rem 0.5rem;
+  background: rgb(16 185 129 / 20%);
+  color: #34d399;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.lead-form .lead-form-reset-btn {
+  padding: 0.75rem 1.5rem;
+  background: rgb(51 65 85 / 80%);
+  color: #fff;
+  border: 1px solid var(--lead-border);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lead-form .lead-form-reset-btn:hover {
+  background: rgb(51 65 85 / 100%);
+  border-color: #64748b;
+}
