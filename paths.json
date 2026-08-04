@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/wsj-poc-ue/:/",
-    "/content/wsj-poc-ue/configuration/:/helix/config.json",
-    "/content/wsj-poc-ue/metadata/:/metadata.json"
+    "/content/poc-updated/:/",
+    "/content/poc-updated/configuration/:/helix/config.json",
+    "/content/poc-updated/metadata/:/metadata.json"
   ],
   "includes": [
-    "/content/wsj-poc-ue/"
+    "/content/poc-updated/"
   ]
 }
