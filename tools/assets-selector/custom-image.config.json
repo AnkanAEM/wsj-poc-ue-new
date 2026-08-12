@@ -3,7 +3,8 @@
     "author-p8803-e21945.adobeaemcloud.com"
   ],
   "aemTierType": [
-    "author"
+    "author",
+    "delivery"
   ],
   "expiryOptions": {
     "allowSelectionAndDrag": false
