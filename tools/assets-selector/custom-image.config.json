@@ -18,12 +18,12 @@
           "element": "radiogroup",
           "name": "property",
           "defaultValue": [
-            "dam:assetStatus==approved"
+            "metadata.embedded.custom-status==approved"
           ],
           "options": [
             {
               "label": "Approved",
-              "value": "dam:assetStatus==approved"
+              "value": "metadata.embedded.custom-status==approved"
             }
           ],
           "readOnly": true
@@ -41,12 +41,12 @@
             "element": "radiogroup",
             "name": "property",
             "defaultValue": [
-              "dam:assetStatus==approved"
+              "metadata.embedded.custom-status==approved"
             ],
             "options": [
               {
                 "label": "Approved",
-                "value": "dam:assetStatus==approved"
+                "value": "metadata.embedded.custom-status==approved"
               }
             ],
             "readOnly": true
