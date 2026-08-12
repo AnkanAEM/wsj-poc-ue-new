@@ -255,5 +255,29 @@
         "value": false
       }
     ]
+  },
+  {
+    "id": "custom-image",
+    "fields": [
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "name": "image",
+        "label": "Image",
+        "configUrl": "/tools/assets-selector/custom-image.config.json",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "caption",
+        "label": "Caption",
+        "valueType": "string"
+      }
+    ]
   }
 ]

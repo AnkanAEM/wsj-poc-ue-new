@@ -1,0 +1,31 @@
+{
+  "rootPath": "/content/dam/assetPoc",
+  "repository": "author",
+  "filterSchema": [
+    {
+      "header": "Status Filter",
+      "groupKey": "metadata",
+      "fields": [
+        {
+          "element": "radio",
+          "name": "metadata.custom-status",
+          "label": "Asset Status",
+          "defaultValue": "approved",
+          "options": [
+            {
+              "label": "Approved",
+              "value": "approved"
+            },
+            {
+              "label": "Rejected",
+              "value": "rejected"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filterFormProps": {
+    "metadata.custom-status": "approved"
+  }
+}
