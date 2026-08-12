@@ -9,28 +9,7 @@
   "expiryOptions": {
     "allowSelectionAndDrag": false
   },
-  "filterSchema": [
-    {
-      "header": "Approval Status",
-      "groupKey": "StatusGroup",
-      "fields": [
-        {
-          "element": "radiogroup",
-          "name": "property",
-          "defaultValue": [
-            "jcr:content/metadata/custom-status==approved"
-          ],
-          "options": [
-            {
-              "label": "Approved",
-              "value": "jcr:content/metadata/custom-status==approved"
-            }
-          ],
-          "readOnly": true
-        }
-      ]
-    }
-  ],
+  "filterSchema": [],
   "filterSchemaMapping": {
     "author-p8803-e21945.adobeaemcloud.com": [
       {
