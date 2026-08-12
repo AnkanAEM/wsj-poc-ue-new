@@ -11,26 +11,6 @@
   },
   "filterSchema": [
     {
-      "header": "File Type",
-      "groupKey": "FileTypeGroup",
-      "fields": [
-        {
-          "element": "checkbox",
-          "name": "type",
-          "defaultValue": [
-            "image/*"
-          ],
-          "options": [
-            {
-              "label": "Image",
-              "value": "image/*",
-              "readOnly": true
-            }
-          ]
-        }
-      ]
-    },
-    {
       "header": "Approval Status",
       "groupKey": "StatusGroup",
       "fields": [
@@ -53,26 +33,6 @@
   ],
   "filterSchemaMapping": {
     "author-p8803-e21945.adobeaemcloud.com": [
-      {
-        "header": "File Type",
-        "groupKey": "FileTypeGroup",
-        "fields": [
-          {
-            "element": "checkbox",
-            "name": "type",
-            "defaultValue": [
-              "image/*"
-            ],
-            "options": [
-              {
-                "label": "Image",
-                "value": "image/*",
-                "readOnly": true
-              }
-            ]
-          }
-        ]
-      },
       {
         "header": "Approval Status",
         "groupKey": "StatusGroup",
