@@ -24,7 +24,7 @@
           "component": "custom-asset-namespace:custom-asset",
           "name": "image",
           "label": "Image",
-          "configUrl": "/tools/assets-selector/custom-image.config.json",
+          "configUrl": "https://feature-custom-asset-picker--wsj-poc-ue-new--ankanaem.aem.page/tools/assets-selector/custom-image.config.json",
           "valueType": "string"
         },
         {
