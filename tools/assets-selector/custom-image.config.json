@@ -16,14 +16,14 @@
       "fields": [
         {
           "element": "radiogroup",
-          "name": "property",
+          "name": "property=metadata.application.custom-status",
           "defaultValue": [
-            "metadata.custom-status==approved"
+            "approved"
           ],
           "options": [
             {
               "label": "Approved",
-              "value": "metadata.custom-status==approved"
+              "value": "approved"
             }
           ],
           "readOnly": true
@@ -39,14 +39,14 @@
         "fields": [
           {
             "element": "radiogroup",
-            "name": "property",
+            "name": "property=metadata.application.custom-status",
             "defaultValue": [
-              "metadata.custom-status==approved"
+              "approved"
             ],
             "options": [
               {
                 "label": "Approved",
-                "value": "metadata.custom-status==approved"
+                "value": "approved"
               }
             ],
             "readOnly": true
