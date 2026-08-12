@@ -16,7 +16,7 @@
       "fields": [
         {
           "element": "radiogroup",
-          "name": "property=metadata.application.custom-status",
+          "name": "property=metadat/custom-status",
           "defaultValue": [
             "approved"
           ],
@@ -39,7 +39,7 @@
         "fields": [
           {
             "element": "radiogroup",
-            "name": "property=metadata.application.custom-status",
+            "name": "property=metadat/custom-status",
             "defaultValue": [
               "approved"
             ],
