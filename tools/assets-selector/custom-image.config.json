@@ -16,7 +16,7 @@
       "fields": [
         {
           "element": "radiogroup",
-          "name": "property=jcr:content/metadata/custom-status",
+          "name": "property=jcr:content/metadata/custom-status=",
           "defaultValue": [
             "approved"
           ],
