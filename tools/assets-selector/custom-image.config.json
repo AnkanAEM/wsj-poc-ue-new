@@ -18,12 +18,12 @@
           "element": "radiogroup",
           "name": "property",
           "defaultValue": [
-            "metadata/custom-status==approved"
+            "metadata.custom-status==approved"
           ],
           "options": [
             {
               "label": "Approved",
-              "value": "metadata/custom-status==approved"
+              "value": "metadata.custom-status==approved"
             }
           ],
           "readOnly": true
@@ -41,12 +41,12 @@
             "element": "radiogroup",
             "name": "property",
             "defaultValue": [
-              "metadata/custom-status==approved"
+              "metadata.custom-status==approved"
             ],
             "options": [
               {
                 "label": "Approved",
-                "value": "metadata/custom-status==approved"
+                "value": "metadata.custom-status==approved"
               }
             ],
             "readOnly": true
