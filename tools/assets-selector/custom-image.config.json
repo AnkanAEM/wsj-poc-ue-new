@@ -16,7 +16,7 @@
       "fields": [
         {
           "element": "radiogroup",
-          "name": "property=metadat/custom-status",
+          "name": "property=metadata.application.custom-status",
           "defaultValue": [
             "approved"
           ],
@@ -24,36 +24,20 @@
             {
               "label": "Approved",
               "value": "approved"
+            },
+            {
+              "label": "Rejected",
+              "value": "rejected"
+            },
+            {
+              "label": "Draft",
+              "value": "draft"
             }
           ],
-          "readOnly": true
+          "readOnly": false
         }
       ]
     }
   ],
-  "filterSchemaMapping": {
-    "author-p8803-e21945.adobeaemcloud.com": [
-      {
-        "header": "Custom Status",
-        "groupKey": "StatusGroup",
-        "fields": [
-          {
-            "element": "radiogroup",
-            "name": "property=metadat/custom-status",
-            "defaultValue": [
-              "approved"
-            ],
-            "options": [
-              {
-                "label": "Approved",
-                "value": "approved"
-              }
-            ],
-            "readOnly": true
-          }
-        ]
-      }
-    ]
-  },
   "rootPath": "/content/dam/poc-updated"
 }
